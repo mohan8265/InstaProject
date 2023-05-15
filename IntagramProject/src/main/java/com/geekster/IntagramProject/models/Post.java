@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//import java.sql.Timestamp;
+import java.sql.Timestamp;
 
 @Data
 @AllArgsConstructor
@@ -15,8 +15,8 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer postId;
-    private String createdDate;
-    private String updatedDate;
+    private Timestamp createdDate;
+    private Timestamp updatedDate;
     private String postData;
 
     @ManyToOne(fetch = FetchType.LAZY)
